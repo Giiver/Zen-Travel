@@ -1,0 +1,165 @@
+* {
+    font-family: 'Inter', sans-serif;
+}
+
+:root {
+    --primary: #FF6B35;
+    --secondary: #004E89;
+    --accent: #F7931E;
+    --dark: #1A1A2E;
+    --light: #F8F9FA;
+}
+
+.gradient-bg {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.hero-gradient {
+    background: linear-gradient(135deg, rgba(0, 78, 137, 0.95) 0%, rgba(26, 26, 46, 0.9) 100%);
+}
+
+.price-card {
+    transition: all 0.3s ease;
+}
+
+.price-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, #FF6B35 0%, #F7931E 100%);
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(255, 107, 53, 0.4);
+}
+
+.sticky-header {
+    transition: all 0.3s ease;
+}
+
+.sticky-header.scrolled {
+    background: rgba(255, 255, 255, 0.98);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+.fade-in {
+    animation: fadeIn 0.6s ease-in;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.savings-badge {
+    background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+}
+
+.testimonial-card {
+    background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+    display: none;
+}
+
+.scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.text-primary {
+    color: var(--primary);
+}
+
+.text-secondary {
+    color: var(--secondary);
+}
+
+.text-accent {
+    color: var(--accent);
+}
+
+.text-dark {
+    color: var(--dark);
+}
+
+.bg-primary {
+    background-color: var(--primary);
+}
+
+.bg-secondary {
+    background-color: var(--secondary);
+}
+
+.bg-accent {
+    background-color: var(--accent);
+}
+
+.bg-dark {
+    background-color: var(--dark);
+}
+
+@media (max-width: 768px) {
+    .price-card {
+        min-width: 280px;
+    }
+}
+
+/* Infinite Scroll Testimonials */
+.testimonials-slider {
+    overflow: hidden;
+    padding: 20px 0;
+    width: 100%;
+}
+
+.testimonials-track {
+    display: flex;
+    gap: 24px;
+    animation: scroll 30s linear infinite;
+    width: fit-content;
+}
+
+.testimonials-track:hover {
+    animation-play-state: paused;
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(calc(-50% - 12px));
+    }
+}
+
+.testimonial-item {
+    flex-shrink: 0;
+    width: 380px;
+}
+
+/* FAQ Accordion */
+.faq-icon {
+    transition: transform 0.3s ease;
+}
+
+.faq-icon.rotate-180 {
+    transform: rotate(180deg);
+}
+
+/* Lucide Icons styling */
+[data-lucide] {
+    display: inline-block;
+    vertical-align: middle;
+}
